@@ -22,7 +22,6 @@
 			if(isset($_POST) && !empty($_POST['input'])) {
 				$input = htmlspecialchars($_POST['input']);
 				$arr = explode(' ', $input);
-				var_dump($arr);
 				$difficulty = 5;
 				for($i = 0; $i < sizeof($arr) - 1; $i += $difficulty) {
 					do {
