@@ -23,11 +23,11 @@
 				$input = htmlspecialchars($_POST['input']);
 				$arr = explode(' ', $input);
 				$difficulty = 5;
-				for($i = 0; $i < sizeof($arr) - 1; $i += $difficulty) {
+				for($i = 0; $i < sizeof($arr); $i += $difficulty) {
 					do {
-						$random = rand(0, $difficulty);
+						$random = rand(1, $difficulty);
 						$pos = $i + $random;
-					} while($pos >= sizeof($arr) || preg_match('/(–)/', $arr[$pos]));
+					} while($pos < sizeof($arr) && preg_match('/(–)/', $arr[$pos]));
 					$arr[$pos] = preg_replace('/([a-žA-Ž]+)/', "<input type='text' id='s{$pos}' name='s{$pos}' autocomplete='off'>", $arr[$pos]);
 				}
 				echo "<input type='hidden' name='input' value='{$input}'>";
