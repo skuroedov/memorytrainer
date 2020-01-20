@@ -41,7 +41,7 @@
 						echo "<h2>Výsledek: {$correct}/{$max} ({$percentage} %)</h2>";
 					} else header('Location: index.php');
 					?>
-					<form action="exercise.php" method="post"><input type="hidden" value="<?=$input?>"><button type="submit" class="btn-blue">Zkusit znovu</button></form>
+					<form action="exercise.php" method="post"><input type="hidden" value="<?=$input?>" name="input"><button type="submit" class="btn-blue">Zkusit znovu</button></form>
 					<a href="index.php"><button class="btn-blue">Vložit jiný text</button></a>
 				</div>
 			</div>

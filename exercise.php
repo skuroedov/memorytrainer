@@ -30,7 +30,6 @@
 						$pos = $i + $random;
 					} while($pos < sizeof($arr) && preg_match('/(–)/', $arr[$pos]));
 					$arr[$pos] = preg_replace('/([a-žA-Ž]+)/', "<input type='text' id='s{$pos}' name='s{$pos}' autocomplete='off'>", $arr[$pos]);
-					//$arr[$pos] = preg_replace('/([a-žA-Ž]+)/', "<b>$1</b>", $arr[$pos]);
 				}
 				echo "<input type='hidden' name='input' value='{$input}'>";
 				$res = nl2br(join(' ', $arr));
