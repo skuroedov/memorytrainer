@@ -22,12 +22,15 @@
 			if(isset($_POST) && !empty($_POST['input'])) {
 				$input = htmlspecialchars($_POST['input']);
 				$arr = preg_split('/( +)|(\n)/', $input);
-				var_dump($arr);
 				$difficulty = 5;
 				$replaced = [];
 				for($i = 0; $i < sizeof($arr); $i += $difficulty) {
 					do {
-						$random = rand(0, $difficulty);
+						$dif = (sizeof($arr)-1) - $i;
+						if($dif < $difficulty)
+							$random = rand(0, $dif);
+						else
+							$random = rand(0, $difficulty);
 						$pos = $i + $random;
 
 					} while($pos >= sizeof($arr) || preg_match('/(–)/', $arr[$pos]) || in_array($pos, $replaced));
