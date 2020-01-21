@@ -20,7 +20,7 @@
 					<?php
 					if(isset($_POST) && !empty($_POST['input'])) {
 						$input = htmlspecialchars($_POST['input']);
-						$original = explode(' ', $input);
+						$original = preg_split('/( +)|(\n)/', $input);
 						$correct = 0;
 						$max = 0;
 						foreach($_POST as $key => $value) {
