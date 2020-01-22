@@ -28,5 +28,4 @@
 			<h3>z oblíbených možností</h3>
 			<p id="random">Coming soon</p>
 		</div>
-	</body>
-</html>
+<?php include 'tpl/footer.html'; ?>

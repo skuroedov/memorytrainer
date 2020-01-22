@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Gelasio|Kalam|PT+Sans|Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Gelasio|Kalam|PT+Sans|Roboto+Slab|IBM+Plex+Mono&display=swap');
 
 body {
     background: #fff;
@@ -138,4 +138,17 @@ button {
 .text {
     font-family: 'Roboto Slab', serif;
     font-size: 1.1em;
+}
+
+footer {
+    width: 100%;
+    background-color: #527086;
+    text-align: center;
+    color: #fff;
+    bottom: 0;
+    position: absolute;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
 }
