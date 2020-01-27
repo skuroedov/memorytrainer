@@ -28,4 +28,9 @@
 			<h3>z oblíbených možností</h3>
 			<p id="random">Coming soon</p>
 		</div>
+		<div class="container t100">
+			<div class="center-block center-text">
+				<p>Tento web byl oceněn dne 27.01.2020</p>
+			</div>
+		</div>
 <?php include 'tpl/footer.html'; ?>
